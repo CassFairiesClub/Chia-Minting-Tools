@@ -17,7 +17,7 @@ LICENSEHASH=f881cb565039ff9a487be6793070e7596ddd882225f2ab01d4d82e8709db8bb7
 EDITION_NUMBER=1
 EDITION_TOTAL=1
 
-echo "hash,uris,meta_hash,meta_uris,license_hash,license_uris" > metadata_$COLLECTION_NAME.csv
+echo "hash,uris,meta_hash,meta_uris,license_hash,license_uris,edition_number,edition_total" > metadata_$COLLECTION_NAME.csv
 
 for i in $(seq 1 $COLLECTION_SIZE)
 do
