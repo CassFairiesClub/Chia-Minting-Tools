@@ -21,9 +21,9 @@ echo "hash,uris,meta_hash,meta_uris,license_hash,license_uris,edition_number,edi
 
 for i in $(seq 1 $COLLECTION_SIZE)
 do
-U=$IPFS/$(echo "$COLLECTION_NAME$i.$EXTENSION")
+U=$IPFS"/"$COLLECTION_NAME"_"$i"."$EXTENSION
 NH=$(curl -s $U | sha256sum | cut -d ' ' -f 1)
-MU=$IPFS/$(echo "$COLLECTION_NAME$i.json")
+MU=$IPFS"/"$COLLECTION_NAME"_"$i"."json
 MH=$(curl -s $MU | sha256sum | cut -d ' ' -f 1)
 
 echo "$NH,$U,$MH,$MU,$LICENSEHASH,$LICENSELINK,$EDITION_NUMBER,$EDITION_TOTAL" >> metadata_$COLLECTION_NAME.csv
